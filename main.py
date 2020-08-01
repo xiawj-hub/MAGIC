@@ -67,7 +67,7 @@ class net():
                         last_epoch = epoch_num
                 self.start = last_epoch
                 self.model.load_state_dict(torch.load(
-                    '%s/model_epoch_%04d.pth' % (self.path, last_epoch), map_location='cuda:0'))
+                    '%s/model_epoch_%04d.pth' % (self.path, last_epoch)))
 
     def displaywin(self, img, low=0.42, high=0.62):
         img[img<low] = low
