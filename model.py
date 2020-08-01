@@ -24,10 +24,10 @@ class prj_module(nn.Module):
 class prj_fun(Function):
     @staticmethod
     def forward(self, input_data, weight, proj, options):
-        temp = ctlib.projection(input_data.double(), options.double()) - proj.double()
-        intervening_res = ctlib.backprojection(temp, options.double())
+        temp = ctlib.projection(input_data, options) - proj
+        intervening_res = ctlib.backprojection(temp, options)
         self.save_for_backward(intervening_res, weight, options)
-        out = input_data - weight * intervening_res.float()
+        out = input_data - weight * intervening_res
         return out
 
     @staticmethod
