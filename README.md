@@ -1,6 +1,7 @@
 # MAGIC: Manifold and Graph Integrative Convolutional Network for Low-Dose CT Reconstruction
 
 Before using this code, it is need to install our libs with the easy_install tool.
+
 If you use this code, please cite our work
 ```
 @article{han2016deep,
