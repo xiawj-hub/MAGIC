@@ -12,6 +12,8 @@ If you use this code, please cite our work
 }
 ```
 
+If you have any question about this code, please contact with the author, email: xwj90620@gmail.com.
+
 ## Environment:
 Windows 10:
 python 3.7, cuda 10.1, pytorch 1.5.0
