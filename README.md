@@ -4,7 +4,7 @@ Before using this code, it is need to install our libs with the easy_install too
 
 If you use this code, please cite our work
 ```
-@article{han2016deep,
+@article{Xia2020magic,
 	title={MAGIC: Manifold and Graph Integrative Convolutional Network for Low-Dose CT Reconstruction},
 	author={Xia, Wenjun and Lu, Zexin and Huang, Yongqiang and Shi, Zuoqiang and Liu, Yan and Chen, Hu and Chen, Yang and Zhou, Jiliu and Zhang, Yi},
 	journal={arXiv preprint	arXiv:2008.00406},
