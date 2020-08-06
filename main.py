@@ -21,7 +21,7 @@ import time
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--epochs", type=int, default=100, help="number of epochs of training")
-parser.add_argument("--batch_size", type=int, default=1, help="size of the batches")
+parser.add_argument("--batch_size", type=int, default=4, help="size of the batches")
 parser.add_argument("--lr", type=float, default=1e-4, help="adam: learning rate")
 parser.add_argument("--n_block", type=int, default=50)
 parser.add_argument("--n_cpu", type=int, default=2)
@@ -30,11 +30,11 @@ parser.add_argument('--checkpoint_interval', type=int, default=1)
 
 opt = parser.parse_args()
 cuda = True if torch.cuda.is_available() else False
-train_vis = Visualizer(env='training_gcn')
+train_vis = Visualizer(env='training_magic')
 
 class net():
     def __init__(self):
-        self.model = model.GCN_Learn(opt.n_block, views=1024, dets=512, width=256, height=256, 
+        self.model = model.MAGIC(opt.n_block, views=1024, dets=512, width=256, height=256, 
             dImg=0.006641, dDet=0.0072, dAng=0.006134, s2r=2.5, d2r=2.5, binshift=0)
         self.loss = nn.MSELoss()
         self.path = opt.model_save_path
