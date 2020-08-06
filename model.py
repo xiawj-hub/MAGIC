@@ -84,9 +84,9 @@ class IterBlock(nn.Module):
         output = self.relu(output)
         return output
 
-class GCN_Learn(nn.Module):
+class MAGIC(nn.Module):
     def __init__(self, block_num, **kwargs):
-        super(GCN_Learn, self).__init__()
+        super(MAGIC, self).__init__()
         views = kwargs['views']
         dets = kwargs['dets']
         width = kwargs['width']
