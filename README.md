@@ -1,8 +1,8 @@
 # MAGIC: Manifold and Graph Integrative Convolutional Network for Low-Dose CT Reconstruction
 
-Before using this code, it is need to install our libs with the easy_install tool.
+Before using this code, you need to install our libs using the easy_install tool.
 
-If you use this code, please cite our work
+If you use the code, please cite our work
 ```
 @article{xia2020magic,
 	title={MAGIC: Manifold and Graph Integrative Convolutional Network for Low-Dose CT Reconstruction},
@@ -12,7 +12,7 @@ If you use this code, please cite our work
 }
 ```
 
-If you have any question about this code, please contact with the author, email: xwj90620@gmail.com.
+If you have any question about the code, please contact with the author, email: xwj90620@gmail.com.
 
 ## Environment:
 Windows 10:
