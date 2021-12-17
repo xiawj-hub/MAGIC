@@ -93,11 +93,13 @@ class MAGIC(nn.Module):
         height = kwargs['height']
         dImg = kwargs['dImg']
         dDet = kwargs['dDet']
+        Ang0 = kwargs['Ang0']
         dAng = kwargs['dAng']
         s2r = kwargs['s2r']
         d2r = kwargs['d2r']
         binshift = kwargs['binshift']
-        options = torch.Tensor([views, dets, width, height, dImg, dDet, dAng, s2r, d2r, binshift])
+        scanType = kwargs['scanType']
+        options = torch.Tensor([views, dets, width, height, dImg, dDet, Ang0, dAng, s2r, d2r, binshift, scanType])
         self.block1 = nn.ModuleList([IterBlock(options) for i in range(int(block_num/2))])
         self.block2 = nn.ModuleList([IterBlock(options) for i in range(int(block_num/2))])
         self.image2patch = image2patch()
