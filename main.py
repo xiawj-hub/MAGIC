@@ -35,7 +35,7 @@ train_vis = Visualizer(env='training_magic')
 class net():
     def __init__(self):
         self.model = model.MAGIC(opt.n_block, views=1024, dets=512, width=256, height=256, 
-            dImg=0.006641, dDet=0.0072, dAng=0.006134, s2r=2.5, d2r=2.5, binshift=0)
+            dImg=0.006641, dDet=0.0072, Ang0=0, dAng=0.006134, s2r=2.5, d2r=2.5, binshift=0, scanType=0)
         self.loss = nn.MSELoss()
         self.path = opt.model_save_path
         self.train_data = DataLoader(trainset_loader("mayo_data_low_dose_256", '0.10'),
